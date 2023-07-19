@@ -40,23 +40,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "libwifi-hal-mtk",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libwifi-hal-mtk.so"],
-		},
-	},
-	compile_multilib: "64",
-	check_elf_files: false,
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
 	name: "vendor.mediatek.hardware.videotelephony@1.0",
 	owner: "xiaomi",
 	strip: {
@@ -398,15 +381,6 @@ prebuilt_etc_xml {
 	name: "vendor.mediatek.hardware.gpu@1.0-service",
 	owner: "xiaomi",
 	src: "proprietary/vendor/etc/vintf/manifest/vendor.mediatek.hardware.gpu@1.0-service.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
-}
-
-prebuilt_etc_xml {
-	name: "wpa_supplicant",
-	owner: "xiaomi",
-	src: "proprietary/vendor/etc/vintf/manifest/wpa_supplicant.xml",
 	filename_from_src: true,
 	sub_dir: "vintf/manifest",
 	soc_specific: true,
